@@ -1,0 +1,13 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: red;
+}
+
+header {
+    position: absolute;
+    width: 20%;
+    background: #191919;
+}
