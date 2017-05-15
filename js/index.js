@@ -4,17 +4,19 @@
         e.preventDefault();
         $(".main-section").addClass("main-section-closed");
         $(".toggle-out").removeClass("hidden");
+        $(".main-section-header").addClass("close-header");
     });
 
     $(".toggle-out").click(function (e) {
         e.preventDefault();
         $(".main-section").removeClass("main-section-closed");
         $(".toggle-out").addClass("hidden");
+        $(".main-section-header").removeClass("close-header");
     });
 
     function getTime(sTime, eTime) {
             var vidUrl = "https://www.youtube.com/embed/vZBCTc9zHtI" + "?start=" + sTime + "&end=" + eTime;
-            $("iFrame").attr("src", vidUrl);
+            $("iframe").attr("src", vidUrl);
         }
 
     $("#submit").click(function () {
@@ -29,5 +31,8 @@
         
     });
 
-
+    $("input[name='graphOption']").change(function () {
+        $("svg").addClass("hidden");
+        $("#" + $("input[name='graphOption']:checked").val()).removeClass("hidden");
+    }).change();
 })(jQuery);

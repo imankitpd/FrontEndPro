@@ -6,7 +6,39 @@
     bottom: 0;
     width: 300px;
     height: 100%;
-    /*background: #157169;*/
+    background-color: #0B6E98;
+    color: #FFF;
+}
+.header .panel {
+    border-radius: 0;
+    margin-bottom: 0;
+    border: 0 none;
+    background-color: inherit;
+}
+.header .panel-default>.panel-heading {
+    background-color: inherit;
+    color: inherit;
+    font-size: 20px;
+}
+
+.header .panel-default>.panel-heading a {
+    color: inherit;
+}
+.rate-section {
+    margin-top: 20px;
+}
+.rate-box .panel {
+    border-radius: 0;
+}
+.rate-box .panel>.panel-heading{
+    border-radius: 0;
+    color: #FFF;
+    background-color: #0B6E98;
+}
+.fa-star {
+    color: #F9E658;
+    font-size: 25px;
+    vertical-align: sub;
 }
 
 .main-section {
@@ -15,7 +47,6 @@
     top: 0;
     bottom: 0;
     right: 0;
-    padding: 15px;
     height: 100%;
     background: #fff;
 }
@@ -24,7 +55,56 @@
     left: 0;
 }
 
+.main-section-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    color: #0B6E98;
+    background: #F0F0F0;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+}
+.main-section-header a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 11px;
+    color: #FFF;
+    background-color: #0B6E98;
+    font-size: 20px;
+    border-radius: 0 5px 5px 0; 
+    bottom: 0;
+    width: 40px;
+}
+.main-section-header h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 12px;
+} 
+.main-section-header.close-header h3 {
+    left: 40px;
+}
 
+.main-section-body {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.video-section {
+    margin-top: 20px;
+}
 
 iframe {
     width: 100%;
@@ -41,84 +121,25 @@ iframe {
     background-color: #eaeaea;
 }
 
-.graph {
-    height: 100%;
-    /*background: cornflowerblue;*/
-}
-
-.slide-in {
-    width: 100px;
-    height: 100px;
-    /* For Safari 3.1 to 6.0 */
-    -webkit-transition-property: width;
-    -webkit-transition-duration: 200ms;
-    -webkit-transition-timing-function: linear;
-    -webkit-transition-delay: 200ms;
-    /* Standard syntax */
-    transition-property: width;
-    transition-duration: 200ms;
-    transition-timing-function: linear;
-    transition-delay: 200ms;
-}
-
-.hide-it {
-    display: none;
-}
-
-.display-me {
-    display: 
-}
-
-/*bar graph's css*/
-
-/*body {
-  font: 10px sans-serif;
-}*/
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
 .bar {
-  fill: orange;
+  fill: steelblue;
 }
 
 .bar:hover {
-  fill: orangered ;
+  fill: brown;
 }
 
-.x.axis path {
+.axis--x path {
   display: none;
 }
-
-.d3-tip {
-  line-height: 1;
-  font-weight: bold;
-  padding: 12px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  border-radius: 2px;
+circle {
+    fill: #111;
+}
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
 }
 
-/* Creates a small triangle extender for the tooltip */
-.d3-tip:after {
-  box-sizing: border-box;
-  display: inline;
-  font-size: 10px;
-  width: 100%;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.8);
-  content: "\25BC";
-  position: absolute;
-  text-align: center;
-}
-
-/* Style northward tooltips differently */
-.d3-tip.n:after {
-  margin: -1px 0 0 0;
-  top: 100%;
-  left: 0;
+.arc path {
+  stroke: #fff;
 }

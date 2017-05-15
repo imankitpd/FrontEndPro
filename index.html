@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FrontEnd Project</title>
-    <!--<link media="all" rel="stylesheet" type="text/css" href="css/style.css">-->
     <link media="all" rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -16,9 +15,9 @@
     <!--Header section-->
     <header class="header">
         <div>
-            <div class="panel panel-danger">
+            <div class="panel panel-default">
                 <div class="panel-heading">
-                    Video Timeline
+                    Video
                     <a href="#" id="toggle_in" class="pull-right"><i class="fa fa-caret-square-o-left" aria-hidden="true"></i></a>
                 </div>
                 <div class="panel-body">
@@ -31,34 +30,31 @@
                             <label for="exampleInputPassword1">Time End</label>
                             <input type="text" class="form-control" id="end-time" placeholder="hh : mm : ss">
                         </div>
-                        <button type="submit" class="btn btn-default" id="submit">Submit</button>
+                        <button type="button" class="btn btn-default pull-right" id="submit">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
-
-        <br>
-
         <!--Graph Options-->
         <div>
-            <div class="panel panel-danger">
+            <div class="panel panel-default">
                 <div class="panel-heading">Graphic Presentation</div>
                 <div class="panel-body">
                     <div class="radio">
                         <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <input type="radio" name="graphOption" id="graphOption1" value="bar">
                             Bar Graph
                         </label>
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            <input type="radio" name="graphOption" id="graphOption2" value="line" checked>
                             Line Graph
                         </label>
                     </div>
-                    <div class="radio disabled">
+                    <div class="radio">
                         <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                            <input type="radio" name="graphOption" id="graphOption3" value="pie">
                             Pie Graph
                         </label>
                     </div>
@@ -69,67 +65,71 @@
 
     <!--Main Section-->
     <div class="main-section">
-        <a href="#" class="toggle-out hidden"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></a>
-        <div class="row">
-            <!--Video Section-->
-            <div class="col-md-12">
-                <h3>Video Analytics</h3>
-            </div>
-            <div class="col-md-8 vid-section">
-                <div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vZBCTc9zHtI" frameborder="0" allowfullscreen></iframe>
+        <div class="main-section-header">
+            <a href="#" class="toggle-out hidden"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></a>
+            <h3>Video Analytics</h3>
+        </div>
+        <div class="main-section-body">
+            <div class="row">
+                <!--Video Section-->
+                <div class="col-md-8">
+                    <div class="video-section">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vZBCTc9zHtI" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
-            </div>
-            <!--Rating Section-->
-            <div class="col-md-4 feedback-sec">
-                <div class="rate-section">
-                    <div class="rate-header">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                Rate the video
-                            </div>
-                            <div class="panel-footer">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        Excellent
-                                    </label>
+                <!--Rating Section-->
+                <div class="col-md-4">
+                    <div class="rate-section">
+                        <div class="rate-box">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-star"></i> Rate the video
                                 </div>
-                                <div class="checkbox disabled">
-                                    <label>
-                                        <input type="checkbox" value="" disabled>
-                                        Very Good
-                                    </label>
-                                </div>
-                                <div class="checkbox disabled">
-                                    <label>
-                                        <input type="checkbox" value="" disabled>
-                                        Good
-                                    </label>
-                                </div>
-                                <div class="checkbox disabled">
-                                    <label>
-                                        <input type="checkbox" value="" disabled>
-                                        Average
-                                    </label>
-                                </div>
-                                <div class="checkbox disabled">
-                                    <label>
-                                        <input type="checkbox" value="" disabled>
-                                        Poor4
-                                    </label>
+                                <div class="panel-body">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="rating" value="5">
+                                            Excellent
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="rating" value="4">
+                                            Very Good
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="rating" value="3">
+                                            Good
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="rating" value="2">
+                                            Average
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="rating" value="1">
+                                            Poor
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!--Graph section-->
-        <div class="row">
-            <div class="col-md-12 graph">
-                <svg width="960" height="500"></svg>
+            <!--Graph section-->
+            <div class="row">
+                <div class="col-md-12 graph">
+                    <svg class="hidden" width="960" height="300" id="bar"></svg>
+                    <svg class="hidden" width="960" height="300" id="line"></svg>
+                    <svg class="hidden" width="960" height="300" id="pie"></svg>
+                </div>
             </div>
         </div>
     </div>
@@ -137,53 +137,69 @@
     <script type="text/javascript" src="js/libs/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
 
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="js/libs/d3.v4.min.js"></script>
     <script>
-        var svg = d3.select("svg"),
-            margin = { top: 20, right: 20, bottom: 30, left: 50 },
-            width = +svg.attr("width") - margin.left - margin.right,
-            height = +svg.attr("height") - margin.top - margin.bottom,
-            g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        // line graph
+        var lineGraph = d3.select("#line"),
+            barGraph = d3.select("#bar"),
+            pieGraph = d3.select("#pie"),
+            margin = { top: 20, right: 20, bottom: 30, left: 70 },
+            width = +lineGraph.attr("width") - margin.left - margin.right,
+            height = +lineGraph.attr("height") - margin.top - margin.bottom,
+            gLine = lineGraph.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")"),
+            gBar = barGraph.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")"),
+            gPie = pieGraph.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")"),
+            ratingJson = {
+                1: "Poor",
+                2: "Average",
+                3: "Good",
+                4: "Very Good",
+                5: "Excellent"
+            },
+            radius = Math.min(width, height) / 2,
+            color = d3.scaleOrdinal().range(["#0B6E98", "#B276B2", "#DECF3F", "#60BD68", "#5DA5DA"]);
+
 
         var parseTime = d3.timeParse("%d-%b-%y");
 
-        var x = d3.scaleTime()
-            .rangeRound([0, width]);
+        var x = d3.scaleTime().rangeRound([0, width]);
 
-        var y = d3.scaleLinear()
-            .rangeRound([height, 0]);
+        var y = d3.scaleLinear().rangeRound([height, 0]);
 
         var line = d3.line()
             .x(function (d) { return x(d.date); })
-            .y(function (d) { return y(d.close); });
+            .y(function (d) { return y(d.rating); });
 
         d3.tsv("data.tsv", function (d) {
             d.date = parseTime(d.date);
-            d.close = +d.close;
+            d.rating = +d.rating;
             return d;
         }, function (error, data) {
             if (error) throw error;
 
             x.domain(d3.extent(data, function (d) { return d.date; }));
-            y.domain(d3.extent(data, function (d) { return d.close; }));
+            y.domain(d3.extent(data, function (d) { return d.rating; }));
 
-            g.append("g")
+            var xAxis = d3.axisBottom().scale(x).tickFormat(d3.timeFormat("%Y-%m-%d"));
+            var yAxis = d3.axisLeft(y).tickPadding(8).ticks(5).tickFormat((d, i) => ratingJson[d])
+
+            gLine.append("g")
                 .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x))
+                .call(xAxis)
                 .select(".domain")
                 .remove();
 
-            g.append("g")
-                .call(d3.axisLeft(y))
+            gLine.append("g")
+                .call(yAxis)
                 .append("text")
                 .attr("fill", "#000")
                 .attr("transform", "rotate(-90)")
                 .attr("y", 6)
                 .attr("dy", "0.71em")
                 .attr("text-anchor", "end")
-                .text("Price ($)");
+                .text("Rating");
 
-            g.append("path")
+            gLine.append("path")
                 .datum(data)
                 .attr("fill", "none")
                 .attr("stroke", "steelblue")
@@ -191,13 +207,76 @@
                 .attr("stroke-linecap", "round")
                 .attr("stroke-width", 1.5)
                 .attr("d", line);
+
+            gLine.selectAll("dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("r", 4)
+                .attr("cx", function (d) { return x(d.date); })
+                .attr("cy", function (d) { return y(d.rating); });
+
+
+            gBar.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis)
+                .select(".domain")
+                .remove();
+
+            gBar.append("g")
+                .call(yAxis)
+                .append("text")
+                .attr("fill", "#000")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 6)
+                .attr("dy", "0.71em")
+                .attr("text-anchor", "end")
+                .text("Rating");
+
+            gBar.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", function (d) { return x(d.date); })
+                .attr("y", function (d) { return y(d.rating); })
+                .attr("height", function (d) { return height - y(d.rating); })
+                .attr("width", "25px");
         });
+
+        var data = [5, 1, 6, 3, 8];
+
+        var arc = d3.arc()
+            .outerRadius(radius - 10)
+            .innerRadius(0);
+
+        var labelArc = d3.arc()
+            .outerRadius(radius - 40)
+            .innerRadius(radius - 40);
+
+        var pie = d3.pie()
+            .sort(null)
+            .value(function (d) { return d; });
+
+        var svg = d3.select("#pie")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        var g = svg.selectAll(".arc")
+            .data(pie(data))
+            .enter().append("g")
+            .attr("class", "arc");
+
+        g.append("path")
+            .attr("d", arc)
+            .style("fill", function (d) { return color(d.data); });
+
+        g.append("text")
+            .attr("transform", function (d) { return "translate(" + labelArc.centroid(d) + ")"; })
+            .attr("dy", ".35em")
+            .text(function (d, i) { return ratingJson[i+1]; });
+
     </script>
-
-    <!--bar graph -->
-    
-    <!---->
-
     <script src="js/index.js"></script>
 </body>
 
